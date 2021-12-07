@@ -24,8 +24,13 @@ can quickly adapt it to your flavors and needs.
 You simply add the main **stylent css** file in the header of your HTML project, that's all!
 
 ```html
-
 <link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css">
+```
+
+Also, you can install locally with NPM:
+
+```bash
+npm i @graphery/stylent.css
 ```
 
 ## Desktop and mobile
