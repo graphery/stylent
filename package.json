@@ -1,0 +1,14 @@
+{
+  "name": "stylent.css",
+  "version": "0.0.2",
+  "description": "Minimalist and customizable CSS",
+  "main": "src/stylent.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "graphery",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css": "^5.2.2"
+  }
+}
