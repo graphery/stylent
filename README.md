@@ -27,7 +27,7 @@ You simply add the main **stylent css** file in the header of your HTML project,
 <link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css">
 ```
 
-Also, you can install locally with NPM:
+Also, you can install it locally with NPM:
 
 ```bash
 npm i @graphery/stylent.css
