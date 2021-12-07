@@ -43,7 +43,8 @@ CSS Variables. Check the CSS Variables support in [caniuse.com](https://caniuse.
 
 ## Support
 
-
+If you have doubts, want to ask a question, suggest a change or have found a bug, write an issue to 
+[GitHub](https://github.com/graphery/stylent.css/issues).
 ## License
 
 [MIT License](https://www.graphery.org/stylent/LICENSE.html). Graphery Project made with ❤.
