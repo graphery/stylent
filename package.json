@@ -6,5 +6,39 @@
   "license": "MIT",
   "devDependencies": {
     "clean-css": "^5.2.2"
-  }
+  },
+  "keywords": [
+    "css",
+    "minimalist",
+    "graphery",
+    "boostrap",
+    "style"
+  ],
+  "homepage": "https://www.graphery.org/stylent.css/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphery/stylent.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/graphery/stylent.css/issues"
+  },
+  "constributors": [
+    {
+      "name": "Pablo Almunia",
+      "email": "pabloalmunia@gmail.com",
+      "url": "https://github.com/pabloalmunia"
+    },
+    {
+      "url": "https://github.com/samuelmgalan"
+    },
+    {
+      "url": "https://github.com/javi3rms"
+    },
+    {
+      "name": "Irene Arribas"
+    },
+    {
+      "url": "https://github.com/todojs"
+    }
+  ]
 }
