@@ -44,6 +44,8 @@
   --st-space-l            : 1em;
   --st-space-xl           : 1.5em;
   --st-space-xxl          : 2em;
+  --st-link-style         : underline dotted var(--st-gray);
+  --st-link-hover-style   : underline solid var(--st-fore-color);
 }
 
 @media screen and (max-width : 768px) {
@@ -127,10 +129,11 @@ p {
   Form
 ******************************/
 label {
+  display       : inline-block;
   margin-top    : var(--st-space);
   margin-bottom : var(--st-space);
   font-size     : var(--st-font-size);
-  transition    : all 0.2s ease;
+  /* transition    : all 0.2s ease; */
 }
 
 input:not([type=button]):not([type=summit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=color]),
@@ -145,7 +148,7 @@ textarea {
   background    : var(--st-bg-color);
   border        : var(--st-border-width) solid var(--st-border-color);
   border-radius : var(--st-border-radius);
-  transition    : all 0.2s ease;
+  /* transition    : all 0.2s ease; */
   font-family   : var(--st-font-family);
 }
 
@@ -156,7 +159,7 @@ input[type=radio] {
   height         : 1.2em;
   width          : 1.2em;
   vertical-align : middle;
-  transition     : all 0.2s ease;
+  /* transition     : all 0.2s ease; */
 }
 
 input[type=color] {
@@ -220,16 +223,16 @@ button,
   font-size       : var(--st-font-size);
   border          : var(--st-border-width) solid var(--st-fore-color);
   border-radius   : var(--st-border-radius);
-  transition      : all 0.2s ease;
+  /* transition      : all 0.2s ease; */
   cursor          : pointer;
   text-align      : center;
   line-height     : 1.4;
 }
 
-button:hover,
-.button:hover,
-[type=submit]:hover,
-[type=button]:hover,
+button:hover:not([disabled]),
+.button:hover:not([disabled]),
+[type=submit]:hover:not([disabled]),
+[type=button]:hover:not([disabled]),
 button:focus,
 .button:focus,
 [type=submit]:focus,
@@ -239,14 +242,15 @@ button:focus,
 
 button:active,
 .button:active,
-[type=submit]:active {
+[type=submit]:active,
+[type=button]:active {
   opacity : 0.6;
 }
 
 button[disabled],
 .button[disabled],
 [type=submit][disabled] {
-  opacity : 0.7;
+  opacity : 0.5;
   cursor  : not-allowed;
 }
 
@@ -257,9 +261,9 @@ button.outline,
   background : var(--st-bg-color-outline);
 }
 
-button.outline:hover,
-.button.outline:hover,
-[type=submit].outline:hover,
+button.outline:hover:not([disabled]),
+.button.outline:hover:not([disabled]),
+[type=submit].outline:hover:not([disabled]),
 button.outline:focus,
 .button.outline:focus,
 [type=submit].outline:focus {
@@ -271,13 +275,14 @@ button.outline:focus,
   Link
 ******************************/
 a {
-  color      : inherit;
-  transition : all 0.2s ease;
+  color           : inherit;
+  text-decoration : var(--st-link-style);
+  /* transition : all 0.2s ease; */
 }
 
 a:hover {
-  cursor                : pointer;
-  text-decoration-style : double;
+  cursor          : pointer;
+  text-decoration : var(--st-link-hover-style);
 }
 
 /******************************
@@ -434,15 +439,16 @@ hr {
 ******************************/
 header,
 main {
-  font-size     : var(--st-font-size);
-  width         : 90%;
-  max-width     : 960px;
-  margin        : var(--st-space-xxl) auto var(--st-space-l);
+  font-size : var(--st-font-size);
+  width     : 90%;
+  max-width : 960px;
+  margin    : var(--st-space-xxl) auto var(--st-space-l);
 }
+
 section,
 article {
-  font-size     : var(--st-font-size);
-  margin        : var(--st-space-xxl) 0;
+  font-size : var(--st-font-size);
+  margin    : var(--st-space-xxl) 0;
 }
 
 footer {

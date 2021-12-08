@@ -46,6 +46,20 @@ CSS Variables. Check the CSS Variables support in [caniuse.com](https://caniuse.
 
 ## [Documentation](https://www.graphery.org/stylent/)
 
+- [Typography](https://www.graphery.org/stylent.css/#typography)
+- [Link](https://www.graphery.org/stylent.css/#link)
+- [Blockquote](https://www.graphery.org/stylent.css/#blockquote)
+- [List](https://www.graphery.org/stylent.css/#list)
+- [Code](https://www.graphery.org/stylent.css/#code)
+- [Box](https://www.graphery.org/stylent.css/#box)
+- [Buttons](https://www.graphery.org/stylent.css/#buttons)
+- [Forms](https://www.graphery.org/stylent.css/#forms)
+- [Tables](https://www.graphery.org/stylent.css/#tables)
+- [Header, Main, Footer, Section, and Article](https://www.graphery.org/stylent.css/#blocks)
+- [Grids](https://www.graphery.org/stylent.css/#grids)
+- [Auxiliary Classes](https://www.graphery.org/stylent.css/#auxiliar)
+- [Customization and Theming](https://www.graphery.org/stylent.css/#customization)
+
 ## Support
 
 If you have doubts, want to ask a question, suggest a change or have found a bug, write an issue to 

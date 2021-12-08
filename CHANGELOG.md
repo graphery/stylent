@@ -1,5 +1,13 @@
 # stylent.css Change Log
 
+## Version 0.0.4 (08/12/2021)
+
+- Improved documentation.
+- Added css variables for link styling and hover links.
+- `label` is now shown as `inline-block`.
+- Fixed a bug with disabled buttons and hover.
+- Increased transparency when a button is disabled.
+
 ## Version 0.0.3 (07/12/2021)
 
 - Changed the relative font size from `rem` to `em`.

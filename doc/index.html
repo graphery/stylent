@@ -3,11 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css">
+  <link rel="stylesheet" href="../src/stylent.css">
   <script src="utils/colorize.js"></script>
   <title>stylent css</title>
 </head>
 <body>
+<a href="https://github.com/graphery/stylent.css" aria-label="View source on GitHub">
+  <svg width="80" height="80" viewBox="0 0 250 250"
+       style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+    <path
+      d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+      fill="currentColor"></path>
+    <path
+      d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+      fill="currentColor"></path>
+  </svg>
+</a>
 <header>
   <h1><img src="https://www.graphery.org/img/gy.svg" width="100px"> stylent css</h1>
 </header>
@@ -47,19 +59,37 @@
     <p>Also, you can install it locally with NPM:</p>
     <pre><code>npm i @graphery/stylent.css</code></pre>
   </section>
-  <section id="mobile">
+  <section id="desktop-and-mobile">
     <h2>Desktop and mobile</h2>
     <p><strong>stylent css</strong> is wholly prepared for work perfectly in desktop, tablet, or mobile environments.
       Each element adjusts its characteristics for the best style in every size. For example, when a screen width of
       less 768px, default font is reduced to 14px, and all headers are reduced in size.
     </p>
   </section>
-  <section id="support">
+  <section id="browser-support">
     <h2>Browser support</h2>
     <p><strong>stylent css</strong> works perfectly in all modern browsers, but does not work in older browsers that do
       not have support for CSS Variables. Check the CSS Variables support in
       <a href="https://caniuse.com/css-variables" target="_blank">caniuse.com</a>.
     </p>
+  </section>
+  <section id="index">
+    <h2>Table of content</h2>
+    <ul>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#link">Link</a></li>
+      <li><a href="#blockquote">Blockquote</a></li>
+      <li><a href="#list">List</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#box">Box</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#blocks">Header, Main, Footer, Section, and Article</a></li>
+      <li><a href="#grids">Grids</a></li>
+      <li><a href="#auxiliar">Auxiliary Classes</a></li>
+      <li><a href="#customization">Customization and Theming</a></li>
+    </ul>
   </section>
   <section id="typography">
     <h2>Typography</h2>
@@ -88,22 +118,13 @@
 <h6>Heading <code>h6</code> 1.00rem (16px)</h6>
 <p>Text 1rem (16px)</p></code></pre>
   </section>
-  <section id="section">
-    <h2>Main, section and other semantic tags</h2>
-    <p>The Semantic Tags allow HTML content to be structured in an orderly and well-defined manner.
-      <strong>stylent</strong> defines semantic tags <code>header</code>, <code>main</code>, and<code>footer</code> with
-      a maximum width of 960px, reducing their width when the screen is less than that value. Also, you can use the
-      <code>section</code> or<code>article</code> tags to define isolated parts of your HTML.</p>
-    <pre><code lang="html"><main>
-  <section>
-    <h2>Main, section and other semantic tags</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum felis ac
-      purus malesuada rutrum. Aliquam cursus eget nisl non finibus. Fusce accumsan metus
-      sit amet enim lobortis placerat. Sed volutpat diam eu bibendum euismod. Cras sit
-      amet tortor sed dolor euismod scelerisque.</p>
-  </section>
-</main></code></pre>
-    <p>As example, this document uses this kind of tag.</p>
+  <section id="link">
+    <h2>Link</h2>
+    <p>The Anchor element creates a hyperlink to web pages, files, email addresses, or locations in the same page.</p>
+    <article class="box">
+      <p><a href="#">simple link</a></p>
+    </article>
+    <pre><code><p><a href="#">simple link</a></p></code></pre>
   </section>
   <section id="blockquotes">
     <h2>Blockquotes</h2>
@@ -166,6 +187,28 @@
   <dd>item 1.1</dd>
 </dl></code></pre>
   </section>
+  <section id="code">
+    <h2>Code</h2>
+    <p>The Code element represents a fragment of computer code. Just wrap anything in a <code>code</code> and it
+      will appear like this. if you need a block, by default, enter the <code>code</code> within the
+      <code>pre</code> element.</p>
+    <article class="box">
+      <pre><code lang="css">.class {
+  color: #9b4dca;
+}</code></pre>
+    </article>
+    <pre><code>&lt;pre&gt;&lt;code lang="css">.class {
+  color: #9b4dca;
+}&lt;/code&gt;&lt;/pre&gt;</code></pre>
+  </section>
+  <section id="box">
+    <h2>Box</h2>
+    <p>You can define a box with the class <code>.box</code></p>
+    <article>
+      <div class="box">Message in a box</div>
+    </article>
+    <pre><code><div class="box">Message in a box</div></code></pre>
+  </section>
   <section id="buttons"><h3>Buttons</h3>
     <p class="description">The Button, an essential part of any user experience. Buttons come in three basic
       styles in
@@ -177,6 +220,9 @@
       <a class="button" href="javascript:void(0)">Default Button (a class="button")</a>
       <button>Default Button (&lt;button&gt;)</button>
       <button class="outline">Outlined Button (class="outline")</button>
+      <a class="button" disabled href="javascript:void(0)">Disabled Default Button (a class="button")</a>
+      <button disabled>Disabled Default Button (&lt;button&gt;)</button>
+      <button disabled class="outline">Disabled Outlined Button (class="outline")</button>
     </article>
     <pre><code><a class="button" href="javascript:void(0)">Default Button (a class="button")</a>
 <button>Default Button (&lt;button&gt;)</button>
@@ -334,6 +380,23 @@
   </tbody>
 </table></code></pre>
   </section>
+  <section id="blocks">
+    <h2>Semantic blocks</h2>
+    <p>The Block Semantic Tags allow you to structure HTML content in an orderly and well-defined manner.
+      <strong>stylent css</strong> defines styles for <code>header</code>, <code>main</code>, and<code>footer</code>
+      with a maximum width of 960px, reducing their width when the screen is less than that value. Also, you can use the
+      <code>section</code> or<code>article</code> tags to define isolated parts of your HTML.</p>
+    <pre><code lang="html"><main>
+  <section>
+    <h2>Main, section and other semantic tags</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum felis ac
+      purus malesuada rutrum. Aliquam cursus eget nisl non finibus. Fusce accumsan metus
+      sit amet enim lobortis placerat. Sed volutpat diam eu bibendum euismod. Cras sit
+      amet tortor sed dolor euismod scelerisque.</p>
+  </section>
+</main></code></pre>
+    <p>As example, this document uses this kind of tag.</p>
+  </section>
   <section id="grids">
     <h2>Grids</h2>
     <p>The Grid Layout is a two-dimensional grid-based layout system. With <strong>stylent css</strong> you only
@@ -392,30 +455,8 @@
 </div>
     </code></pre>
   </section>
-  <section id="code">
-    <h2>Code</h2>
-    <p>The Code element represents a fragment of computer code. Just wrap anything in a <code>code</code> and it
-      will appear like this. if you need a block, by default, enter the <code>code</code> within the
-      <code>pre</code> element.</p>
-    <article class="box">
-      <pre><code lang="css">.class {
-  color: #9b4dca;
-}</code></pre>
-    </article>
-    <pre><code>&lt;pre&gt;&lt;code lang="css">.class {
-  color: #9b4dca;
-}&lt;/code&gt;&lt;/pre&gt;</code></pre>
-  </section>
-  <section id="box">
-    <h2>Box</h2>
-    <p>You can define a box with the class <code>.box</code></p>
-    <article>
-      <div class="box">Message in a box</div>
-    </article>
-    <pre><code><div class="box">Message in a box</div></code></pre>
-  </section>
-  <section id="utilities">
-    <h2>Utilities</h2>
+  <section id="auxiliar">
+    <h2>Auxiliary Classes</h2>
     <p><strong>stylent css</strong> provides some basic utility classes to speed up development.</p>
     <table>
       <thead>
@@ -446,7 +487,7 @@
     </table>
   </section>
   <section id="customization">
-    <h2>Customization and theming</h2>
+    <h2>Customization and Theming</h2>
     <p>You can define our own style with a few of CSS custom variables. If you change the initial values, you can
       define a custom theme for <strong>stylent css</strong>. This is the list of available CSS custom variables:</p>
     <table>
@@ -494,6 +535,9 @@
         <tr><td class="no-wrap">--st-space-l </td><td><code>1em;</code></td></tr>
         <tr><td class="no-wrap">--st-space-xl </td><td><code>1.5em;</code></td></tr>
         <tr><td class="no-wrap">--st-space-xxl </td><td><code>2em;</code></td></tr>
+        <tr><td class="no-wrap">--st-link-style </td><td><code>underline dotted var(--st-gray);</code></td></tr>
+        <tr><td class="no-wrap">--st-link-hover-style </td><td><code>underline solid
+          var(--st-fore-color);</code></td></tr>
       </tbody>
     </table>
   </section>
