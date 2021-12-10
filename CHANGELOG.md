@@ -1,5 +1,12 @@
 # stylent.css Change Log
 
+## Version 0.0.5 (10/12/2021)
+
+- Remove space between nested list.
+- added `display: flex` on all related classes.
+- removed the `.flex` class, this attribute is now included in other classes and is not allowed to be used as a stand-alone class.
+- Improved auxiliary class documentation.
+
 ## Version 0.0.4 (08/12/2021)
 
 - Improved documentation.
