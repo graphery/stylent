@@ -1,5 +1,14 @@
 # stylent.css Change Log
 
+## Version 0.1.0 (12/12/2021)
+
+- Added automatic dark mode support.
+- Added `.dark` and `.no-dark` auxiliary class.
+- Added custom css properties for dar mode.
+- Fixed the fore color for `<code>`.
+- Fixed the input focus color.
+- Optimized the `line-height` management.
+
 ## Version 0.0.5 (10/12/2021)
 
 - Remove space between nested list.

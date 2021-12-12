@@ -57,6 +57,7 @@ CSS Variables. Check the CSS Variables support in [caniuse.com](https://caniuse.
 - [Tables](https://www.graphery.org/stylent.css/#tables)
 - [Header, Main, Footer, Section, and Article](https://www.graphery.org/stylent.css/#blocks)
 - [Grids](https://www.graphery.org/stylent.css/#grids)
+- [Dark mode](https://www.graphery.org/stylent.css/#dark)
 - [Auxiliary Classes](https://www.graphery.org/stylent.css/#auxiliar)
 - [Customization and Theming](https://www.graphery.org/stylent.css/#customization)
 

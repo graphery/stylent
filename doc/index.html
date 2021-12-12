@@ -87,6 +87,7 @@
       <li><a href="#tables">Tables</a></li>
       <li><a href="#blocks">Header, Main, Footer, Section, and Article</a></li>
       <li><a href="#grids">Grids</a></li>
+      <li><a href="#dark">Dark mode</a></li>
       <li><a href="#auxiliar">Auxiliary Classes</a>
         <ul>
           <li><a href="#hidden">Hidden</a></li>
@@ -464,9 +465,49 @@
 </div>
     </code></pre>
   </section>
+  <section id="dark">
+    <h2>Dark mode</h2>
+    <p>Dark mode has gone mainstream and Apple, Microsoft and Google have added dark mode to their operating systems.
+      That's why stylent css includes an automatic dark mode style. You don't need to do anything.
+    </p>
+    <p>If you want to set the dark mode on your page regardless of the operating system, you can use the
+      <code>.dark</code> auxiliary style, usually in the &lt;body&gt; tag.</p>
+    <p>If you want to avoid applying the dark mode and always display the light mode, use the <code>.no-dark</code>
+      auxiliary style.</p>
+    <article>
+      <div id="current-mode">Your operating system is in <span></span></div>
+      <button id="change-mode">force the <span></span> in this page</button>
+    </article>
+    <script>
+      const body         = document.body;
+      const defaultLabel = document.querySelector('#current-mode span');
+      const buttonLabel  = document.querySelector('#change-mode span');
+      let isDark         = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        defaultLabel.innerHTML = e.matches ? 'dark mode' : 'ligth mode';
+      });
+      defaultLabel.innerHTML = isDark ? 'dark mode' : 'ligth mode';
+      buttonLabel.innerHTML  = isDark ? 'ligth mode' : 'dark mode';
+      document.querySelector('#change-mode').addEventListener('click', () => {
+        body.classList.add(isDark ? 'no-dark' : 'dark');
+        body.classList.remove(isDark ? 'dark' : 'no-dark');
+        isDark                = body.classList.contains('dark');
+        buttonLabel.innerHTML = isDark ? 'ligth mode' : 'dark mode';
+      });
+    </script>
+    <table>
+      <thead>
+        <tr><th>Class</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>.dark</code></td><td>force the dark mode</td></tr>
+        <tr><td><code>.no-dark</code></td><td>avoid the dark mode</td></tr>
+      </tbody>
+    </table>
+  </section>
   <section id="auxiliar">
     <h2>Auxiliary Classes</h2>
-    <p><strong>stylent css</strong> provides some basic utility classes to speed up development.</p>
+    <p><strong>stylent css</strong> provides others useful basic classes to speed up development.</p>
     <h3 id="hidden">Hidden</h3>
     <table>
       <thead>
@@ -516,7 +557,7 @@
     <div class="box">
       <style>
         .example {
-          height: 6em;
+          height : 6em;
         }
       </style>
       <div class="row gutter">
@@ -616,6 +657,12 @@
         <tr><td class="no-wrap">--st-bg-color-alt </td><td><code>var(--st-black);</code></td></tr>
         <tr><td class="no-wrap">--st-focus-border-color </td><td><code>var(--st-blue);</code></td></tr>
         <tr><td class="no-wrap">--st-bg-color-code </td><td><code>var(--st-lightgray);</code></td></tr>
+        <tr><td class="no-wrap">--st-fore-color-dark </td><td><code>var(--st-white);</code></td></tr>
+        <tr><td class="no-wrap">--st-bg-color-dark </td><td><code>var(--st-black);</code></td></tr>
+        <tr><td class="no-wrap">--st-fore-color-alt-dark </td><td><code>var(--st-black);</code></td></tr>
+        <tr><td class="no-wrap">--st-bg-color-alt-dark </td><td><code>var(--st-lightgray);</code></td></tr>
+        <tr><td class="no-wrap">--st-fore-color-code-dark </td><td><code>var(--st-black);</code></td></tr>
+        <tr><td class="no-wrap">--st-bg-color-code-dark </td><td><code>var(--st-darkgray);</code></td></tr>
         <tr><td class="no-wrap">--st-bg-color-outline </td><td><code>rgba(255, 255, 255, 0.7);</code></td></tr>
         <tr><td class="no-wrap">--st-border-width </td><td><code>1px;</code></td></tr>
         <tr><td class="no-wrap">--st-border-radius </td><td><code>2px;</code></td></tr>
@@ -640,6 +687,7 @@
 </main>
 <footer class="text-center">
   <p><a href="LICENSE.html">MIT License</a> | Graphery Project made with ❤️</p>
+  <p><code>test</code></p>
 </footer>
 <script>
   document.querySelectorAll('pre > code').forEach(code => {

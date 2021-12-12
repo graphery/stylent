@@ -2,57 +2,88 @@
 
 /******************************
  Variables
- ============================*/
-
+ ******************************/
 :host,
-:root {
-  --st-font-family        : -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  --st-font-family-mono   : "Consolas", "Monaco", "Menlo", monospace;
-  --st-font-weight        : 400;
-  --st-font-bold-weight   : 500;
-  --st-black              : #333;
-  --st-darkgrey           : #888;
-  --st-gray               : #a7a7a7;
-  --st-lightgray          : #f5f5f5;
-  --st-white              : #fff;
-  --st-blue               : #0062ff;
-  --st-red                : #ff1500;
-  --st-yellow             : #ffbf00;
-  --st-green              : #00b30f;
-  --st-violet             : #9b4dca;
-  --st-fore-color         : var(--st-black);
-  --st-bg-color           : var(--st-white);
-  --st-border-color       : var(--st-gray);
-  --st-fore-color-alt     : var(--st-lightgray);
-  --st-bg-color-alt       : var(--st-black);
-  --st-focus-border-color : var(--st-blue);
-  --st-bg-color-code      : var(--st-lightgray);
-  --st-bg-color-outline   : rgba(255, 255, 255, 0.7);
-  --st-border-width       : 1px;
-  --st-border-radius      : 2px;
-  --st-font-size-xs       : 0.8rem;
-  --st-font-size-s        : 0.9rem;
-  --st-font-size          : 16px;
-  --st-font-size-l        : 1.25em;
-  --st-font-size-xl       : 1.50em;
-  --st-font-size-xxl      : 1.75em;
-  --st-font-size-xxxl     : 2.00em;
-  --st-font-size-xxxxl    : 2.50em;
-  --st-line-height        : 1.6em;
-  --st-line-height-l      : 2em;
-  --st-space              : 0.5em;
-  --st-space-l            : 1em;
-  --st-space-xl           : 1.5em;
-  --st-space-xxl          : 2em;
-  --st-link-style         : underline dotted var(--st-gray);
-  --st-link-hover-style   : underline solid var(--st-fore-color);
+:root,
+.no-dark {
+  --st-font-family          : -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --st-font-family-mono     : "Consolas", "Monaco", "Menlo", monospace;
+  --st-font-weight          : 400;
+  --st-font-bold-weight     : 500;
+  --st-black                : #333;
+  --st-darkgray             : #999;
+  --st-gray                 : #a7a7a7;
+  --st-lightgray            : #f5f5f5;
+  --st-white                : #fff;
+  --st-blue                 : #0062ff;
+  --st-red                  : #ff1500;
+  --st-yellow               : #ffbf00;
+  --st-green                : #00b30f;
+  --st-violet               : #9b4dca;
+  --st-fore-color           : var(--st-black);
+  --st-bg-color             : var(--st-white);
+  --st-border-color         : var(--st-gray);
+  --st-fore-color-alt       : var(--st-lightgray);
+  --st-bg-color-alt         : var(--st-black);
+  --st-focus-border-color   : var(--st-blue);
+  --st-fore-color-code      : var(--st-black);
+  --st-bg-color-code        : var(--st-lightgray);
+  --st-fore-color-dark      : var(--st-white);
+  --st-bg-color-dark        : var(--st-black);
+  --st-fore-color-alt-dark  : var(--st-black);
+  --st-bg-color-alt-dark    : var(--st-lightgray);
+  --st-fore-color-code-dark : var(--st-black);
+  --st-bg-color-code-dark   : var(--st-darkgray);
+  --st-bg-color-outline     : rgba(255, 255, 255, 0.7);
+  --st-border-width         : 1px;
+  --st-border-radius        : 2px;
+  --st-font-size-xs         : 0.8rem;
+  --st-font-size-s          : 0.9rem;
+  --st-font-size            : 16px;
+  --st-font-size-l          : 1.25em;
+  --st-font-size-xl         : 1.50em;
+  --st-font-size-xxl        : 1.75em;
+  --st-font-size-xxxl       : 2.00em;
+  --st-font-size-xxxxl      : 2.50em;
+  --st-line-height          : 1.6em;
+  --st-line-height-l        : 2em;
+  --st-space                : 0.5em;
+  --st-space-l              : 1em;
+  --st-space-xl             : 1.5em;
+  --st-space-xxl            : 2em;
+  --st-link-style           : underline dotted var(--st-gray);
+  --st-link-hover-style     : underline solid var(--st-fore-color);
 }
 
+/*
+ Dark mode
+ */
+@media (prefers-color-scheme : dark) {
+  :host,
+  :root {
+    --st-fore-color     : var(--st-fore-color-dark);
+    --st-bg-color       : var(--st-bg-color-dark);
+    --st-fore-color-alt : var(--st-fore-color-alt-dark);
+    --st-bg-color-alt   : var(--st-bg-color-alt-dark);
+    --st-bg-color-code  : var(--st-bg-color-code-dark);
+  }
+}
+
+.dark {
+  --st-fore-color     : var(--st-fore-color-dark);
+  --st-bg-color       : var(--st-bg-color-dark);
+  --st-fore-color-alt : var(--st-fore-color-alt-dark);
+  --st-bg-color-alt   : var(--st-bg-color-alt-dark);
+  --st-bg-color-code  : var(--st-bg-color-code-dark);
+}
+
+/*
+ Small screens
+ */
 @media screen and (max-width : 768px) {
   :host,
   :root {
-    --st-font-size   : 14px;
-    --st-line-height : var(--st-line-height);
+    --st-font-size : 14px;
   }
 }
 
@@ -65,8 +96,10 @@
 
 html,
 body {
-  margin  : 0;
-  padding : 0;
+  margin     : 0;
+  padding    : 0;
+  color      : var(--st-fore-color);
+  background : var(--st-bg-color);
 }
 
 body,
@@ -120,7 +153,6 @@ h6 {
 
 p {
   font-size     : var(--st-font-size);
-  line-height   : 1.5;
   margin-top    : var(--st-space);
   margin-bottom : var(--st-space);
 }
@@ -178,7 +210,7 @@ input:not([type=button]):not([type=submit]):not([type=reset]):focus,
 select:focus,
 textarea:focus {
   outline      : none;
-  border-color : var(--st-focus-border-color);
+  border-color : var(--st-focus-border-color) !important;
 }
 
 input[type=image],
@@ -215,7 +247,6 @@ button,
   font-family     : var(--st-font-family);
   margin-top      : var(--st-space);
   margin-bottom   : var(--st-space);
-  padding         : 0.59em 1em;
   outline         : none;
   text-decoration : none;
   color           : var(--st-fore-color-alt);
@@ -226,6 +257,7 @@ button,
   /* transition      : all 0.2s ease; */
   cursor          : pointer;
   text-align      : center;
+  padding         : 0.59em 1em;
   line-height     : 1.4;
 }
 
@@ -313,8 +345,8 @@ dl dd:first-child {
 
 li ul,
 li ol {
-  margin-top : calc(var(--st-space) * -1);
-  margin-bottom: 0;
+  margin-top    : calc(var(--st-space) * -1);
+  margin-bottom : 0;
 }
 
 ul ul,
@@ -389,13 +421,13 @@ p img {
 ******************************/
 pre {
   font-size     : var(--st-font-size);
-  line-height   : var(--st-line-height);
   margin-top    : var(--st-space-l);
   margin-bottom : var(--st-space-l);
 }
 
 code {
   padding     : 2px;
+  color       : var(--st-fore-color-code);
   background  : var(--st-bg-color-code);
   font-family : var(--st-font-family-mono);
 }
@@ -445,10 +477,11 @@ hr {
 ******************************/
 header,
 main {
-  font-size : var(--st-font-size);
-  width     : 90%;
-  max-width : 960px;
-  margin    : var(--st-space-xxl) auto var(--st-space-l);
+  font-size   : var(--st-font-size);
+  width       : 90%;
+  max-width   : 960px;
+  margin      : 0 auto var(--st-space-l);
+  padding-top : var(--st-space-xxl);
 }
 
 section,
