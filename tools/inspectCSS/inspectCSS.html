@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inspect CSS</title>
+  <link rel="stylesheet" href="../../css/stylent.css">
+  <script src="./inspectCSS.js"></script>
+</head>
+<body>
+<main>
+  <h1>Inspect CSS</h1>
+  <pre class="box" id="result"></pre>
+</main>
+<script>
+  document.querySelector('#result').innerHTML = inspectCSS(document.styleSheets[0]).toString(null, 2);
+</script>
+</body>
+</html>
