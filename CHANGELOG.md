@@ -1,5 +1,20 @@
 # stylent.css Change Log
 
+## Version 0.2.0 (30/12/2021)
+
+- Changed `rem` to `em` in `--st-font-size-xs` and `--st-font-size-s`.
+- Reduced font size for `l`, `xl`, `xxl`, and `xxxxl`.
+- Remove color variables with name: `--st-black`, `--st-darkgray`, `--st-gray`, `--st-lightgray`, `--st-white`,
+  `--st-blue`, `--st-red`, `--st-yellow`, `--st-green`, and `--st-violet`.
+- Added the schema color variables: `--st-color-0`, `--st-color-1`, `--st-color-2`, `--st-color-3`, `--st-color-4`, 
+  `--st-color-5`, `--st-color-6`, `--st-color-7`, `--st-color-8`, and `--st-color-9`.
+- The different color variables are adjusted to follow the established color schema.
+- Fixed the `.dark` style.
+- Removed the `.no-dark` style.
+- Added the `.light` style for force the light mode.
+- Added smooth scroll.
+- Change the style for hover and focus on buttons.
+
 ## Version 0.1.0 (12/12/2021)
 
 - Added automatic dark mode support.
@@ -13,7 +28,8 @@
 
 - Remove space between nested list.
 - added `display: flex` on all related classes.
-- removed the `.flex` class, this attribute is now included in other classes and is not allowed to be used as a stand-alone class.
+- removed the `.flex` class, this attribute is now included in other classes and is not allowed to be used as a
+  stand-alone class.
 - Improved auxiliary class documentation.
 
 ## Version 0.0.4 (08/12/2021)
