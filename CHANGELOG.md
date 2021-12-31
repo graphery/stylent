@@ -1,5 +1,12 @@
 # stylent.css Change Log
 
+## Version 0.2.1 (31/12/2021)
+
+- recovered variables `--st-fore-color-dark`, `--st-bg-color-dark`, `--st-fore-color-alt-dark`, and
+  `--st-bg-color-alt-dark`.
+- Fixed `code` colors.
+- Fixed style for visited anchor.
+
 ## Version 0.2.0 (30/12/2021)
 
 - Changed `rem` to `em` in `--st-font-size-xs` and `--st-font-size-s`.
