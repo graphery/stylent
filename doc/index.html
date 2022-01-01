@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css">
+<!--  <link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css">-->
+  <link rel="stylesheet" href="../css/stylent.css">
   <script src="utils/colorize.js"></script>
   <title>stylent css</title>
 </head>
@@ -20,8 +21,9 @@
       fill="currentColor"></path>
   </svg>
 </a>
-<header>
-  <h1><img src="https://www.graphery.org/img/gy.svg" width="100px"> stylent css</h1>
+<header class="row">
+  <h1 class="col"><img src="https://www.graphery.org/img/gy.svg" width="100px"> stylent css</h1>
+  <div class="col align-center justify-end" style="font-size: var(--st-font-size-xs)">version 0.2.2</div>
 </header>
 <main>
   <section id="why">
@@ -35,19 +37,20 @@
         <div class="col">
           <h5 class="text-center">Intuitive</h5>
           <p class="content">Including <strong>stylent css</strong> in your HTML will automatically give an elegant
-            style
-            to all elements. No need to learn complicated CSS classes. It is simple and intuitive.
+            style to all elements. No need to learn complicated and confusing CSS classes. It is all simple and
+            intuitive.
           </p>
         </div>
         <div class="col">
           <h5 class="text-center">Lightweight</h5>
           <p class="content"><strong>stylent css</strong> includes all the features you need, including grid, styles for
-            all elements, utility class, keeping everything with a minimal footprint.</p>
+            all elements, utility class, dark mode support, keeping everything with a minimal footprint.</p>
         </div>
         <div class="col">
           <h5 class="text-center">Customizable</h5>
           <p class="content"><strong>stylent css</strong> allows complete configuration and theming using CSS variables.
-            The default style is beautiful, but you can quickly adapt it to your flavors and needs.</p>
+            The default style is beautiful, but you can quickly adapt it to your flavors and needs with our
+            <a href="https://www.graphery.org/stylent.css/theme-editor/">theme editor</a>.</p>
         </div>
       </div>
     </div>
@@ -56,7 +59,7 @@
     <h2>Getting Started</h2>
     <p>You simply add the main <strong>stylent css</strong> file in the header of your HTML project, that's all!</p>
     <pre><code><link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css"></code></pre>
-    <p>Also, you can install it locally with NPM:</p>
+    <p>Also, you can install it locally with <a href="https://www.npmjs.com/package/@graphery/stylent.css">NPM</a>:</p>
     <pre><code>npm i @graphery/stylent.css</code></pre>
   </section>
   <section id="desktop-and-mobile">

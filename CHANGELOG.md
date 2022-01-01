@@ -1,5 +1,12 @@
 # stylent.css Change Log
 
+## Version 0.2.2 (01/01/2022)
+
+- Changed the button opacity from 0.5 to 0.4
+- Fixed error in minimized version.
+- Fixed error with fieldset border.
+- Fixed minor error in documentation.
+
 ## Version 0.2.1 (31/12/2021)
 
 - recovered variables `--st-fore-color-dark`, `--st-bg-color-dark`, `--st-fore-color-alt-dark`, and

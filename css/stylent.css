@@ -1,4 +1,4 @@
-/*! stylent.css | v0.2.1 | Copyright 2021 Graphery | MIT License */
+/*! stylent.css | v0.2.2 | Copyright 2021 Graphery | MIT License */
 
 /******************************
  Variables
@@ -230,7 +230,7 @@ textarea {
 }
 
 fieldset {
-  border-width  : var(--st-border-width) solid var(--st-border-color);
+  border        : var(--st-border-width) solid var(--st-border-color);
   border-radius : var(--st-border-radius);
   padding       : 1em;
 }
@@ -286,7 +286,7 @@ button:active,
 button[disabled],
 .button[disabled],
 [type=submit][disabled] {
-  opacity : 0.5;
+  opacity : 0.4;
   cursor  : not-allowed;
 }
 
