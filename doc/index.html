@@ -22,7 +22,7 @@
 </a>
 <header class="row">
   <h1 class="col"><img src="https://www.graphery.org/img/gy.svg" width="100px"> stylent css</h1>
-  <div class="col align-center justify-end" style="font-size: var(--st-font-size-xs)">version 0.2.2</div>
+  <div class="col align-center justify-end" style="font-size: var(--st-font-size-xs)">version 1.0.0</div>
 </header>
 <main>
   <section id="why">
@@ -474,8 +474,6 @@
       <code>.dark</code> auxiliary style, usually in the &lt;body&gt; tag.</p>
     <p>Conversely, if you want to set the light mode on your page regardless of the operating system, you can use the
       <code>.light</code> auxiliary style, usually in the &lt;body&gt; tag.</p>
-    <p>If you want to avoid applying the dark mode and always display the light mode, use the <code>.no-dark</code>
-      auxiliary style.</p>
     <article>
       <div id="current-mode">Your operating system is in <span></span></div>
       <button id="change-mode">force the <span></span> in this page</button>
@@ -503,7 +501,7 @@
       </thead>
       <tbody>
         <tr><td><code>.dark</code></td><td>force the dark mode</td></tr>
-        <tr><td><code>.no-dark</code></td><td>avoid the dark mode</td></tr>
+        <tr><td><code>.light</code></td><td>force the light mode</td></tr>
       </tbody>
     </table>
   </section>
@@ -683,9 +681,9 @@
         <tr><td class="no-wrap">--st-border-width</td><td><code> 1px;</code></td></tr>
         <tr><td class="no-wrap">--st-border-radius</td><td><code> 2px;</code></td></tr>
         <tr><td class="no-wrap">--st-space</td><td><code> 0.5em;</code></td></tr>
-        <tr><td class="no-wrap">--st-space-l</td><td><code> 1em;</code></td></tr>
-        <tr><td class="no-wrap">--st-space-xl</td><td><code> 1.5em;</code></td></tr>
-        <tr><td class="no-wrap">--st-space-xxl</td><td><code> 2em;</code></td></tr>
+        <tr><td class="no-wrap">--st-space-after</td><td><code> var(--st-space);</code></td></tr>
+        <tr><td class="no-wrap">--st-space-before</td><td><code> calc(var(--st-space) * 2);</code></td></tr>
+        <tr><td class="no-wrap">--st-gutter</td><td><code> calc(var(--st-space) * 3)";</code></td></tr>
         <tr><td class="no-wrap">--st-link-style</td><td><code> underline dotted var(--st-color-4);</code></td></tr>
         <tr><td class="no-wrap">--st-link-hover-style</td><td><code> underline solid var(--st-fore-color);</code></td></tr>
 

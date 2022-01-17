@@ -1,4 +1,4 @@
-/*! stylent.css | v0.2.2 | Copyright 2021 Graphery | MIT License */
+/*! stylent.css | v1.0.0 | Copyright 2022 Graphery | MIT License */
 
 /******************************
  Variables
@@ -10,8 +10,7 @@
   --st-font-family-mono    : "Consolas", "Monaco", "Menlo", monospace;
   --st-font-weight         : 400;
   --st-font-bold-weight    : 500;
-  --st-font-size-xs        : 0.8em;
-  --st-font-size-s         : 0.9em;
+  --st-font-size-s         : 0.8em;
   --st-font-size           : 16px;
   --st-font-size-l         : 1.15em;
   --st-font-size-xl        : 1.30em;
@@ -51,9 +50,9 @@
   --st-border-radius       : 2px;
   
   --st-space               : 0.5em;
-  --st-space-l             : 1em;
-  --st-space-xl            : 1.5em;
-  --st-space-xxl           : 2em;
+  --st-space-after         : var(--st-space);
+  --st-space-before        : calc(var(--st-space) * 2);
+  --st-gutter              : calc(var(--st-space) * 3);
   
   --st-link-style          : underline dotted var(--st-color-4);
   --st-link-hover-style    : underline solid var(--st-fore-color);
@@ -127,8 +126,8 @@ h5,
 h6 {
   font-weight   : var(--st-font-bold-weight);
   line-height   : var(--st-line-height-l);
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
 }
 
 h1 {
@@ -157,8 +156,8 @@ h6 {
 
 p {
   font-size     : var(--st-font-size);
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
 }
 
 /******************************
@@ -166,10 +165,8 @@ p {
 ******************************/
 label {
   display       : inline-block;
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
-  /* font-size     : var(--st-font-size); */
-  /* transition    : all 0.2s ease; */
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
 }
 
 input:not([type=button]):not([type=summit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=color]),
@@ -177,8 +174,8 @@ select,
 textarea {
   height        : 2.7em;
   width         : 100%;
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
   padding       : 0.5em;
   font-size     : var(--st-font-size);
   color         : var(--st-fore-color);
@@ -191,7 +188,6 @@ textarea {
 
 input[type=checkbox],
 input[type=radio] {
-  margin-bottom  : 0.5em;
   font-size      : var(--st-font-size);
   height         : 1.2em;
   width          : 1.2em;
@@ -236,8 +232,8 @@ fieldset {
 }
 
 form, fieldset {
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
 }
 
 /******************************
@@ -250,8 +246,8 @@ button,
 [type=button] {
   display         : inline-block;
   font-family     : var(--st-font-family);
-  margin-top      : var(--st-space);
-  margin-bottom   : var(--st-space);
+  margin-top      : var(--st-space-before);
+  margin-bottom   : var(--st-space-after);
   outline         : none;
   text-decoration : none;
   color           : var(--st-fore-color-alt);
@@ -319,8 +315,8 @@ ul,
 ol,
 dl {
   font-size           : var(--st-font-size);
-  margin-top          : var(--st-space);
-  margin-bottom       : var(--st-space);
+  margin-top          : var(--st-space-before);
+  margin-bottom       : var(--st-space-after);
   padding-left        : 0;
   list-style-position : inside;
 }
@@ -335,13 +331,13 @@ dl dd {
 ul li:first-child,
 ol li:first-child,
 dl dd:first-child {
-  margin-top : var(--st-space);
+  margin-top : var(--st-space-before);
 }
 
 li ul,
 li ol {
-  margin-top    : calc(var(--st-space) * -1);
-  margin-bottom : 0;
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
 }
 
 ul ul,
@@ -349,7 +345,7 @@ ol ul,
 ul ol,
 ol ol,
 dl dd {
-  margin-left : var(--st-space-l);
+  margin-left : var(--st-space-before);
 }
 
 /*****************************
@@ -396,8 +392,8 @@ th:last-child {
   Image
 ******************************/
 img {
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
   border        : none;
 }
 
@@ -416,8 +412,8 @@ p img {
 ******************************/
 pre {
   font-size     : var(--st-font-size);
-  margin-top    : var(--st-space-l);
-  margin-bottom : var(--st-space-l);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
 }
 
 code {
@@ -433,8 +429,8 @@ pre code {
 
 pre code, blockquote {
   margin-left   : 0;
-  margin-top    : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
   padding       : 1rem;
   display       : block;
   border        : 0;
@@ -475,29 +471,29 @@ main {
   font-size   : var(--st-font-size);
   width       : 90%;
   max-width   : 960px;
-  margin      : 0 auto var(--st-space-l);
-  padding-top : var(--st-space-xxl);
+  margin      : 0 auto var(--st-space);
+  padding-top : var(--st-space-before);
 }
 
 section,
 article {
   font-size : var(--st-font-size);
-  margin    : var(--st-space-xxl) 0;
+  margin    : var(--st-space-before) 0;
 }
 
 footer {
-  font-size        : var(--st-font-size-xs);
-  margin-top       : var(--st-space-xxl);
+  font-size        : var(--st-font-size-s);
+  margin-top       : var(--st-space-before);
   width            : 100%;
   border-top       : var(--st-border-width) solid var(--st-border-color);
-  padding-top      : var(--st-space-xl);
-  padding-bottom   : var(--st-space-xl);
+  padding-top      : var(--st-space);
+  padding-bottom   : var(--st-space);
   color            : var(--st-fore-color-alt);
   background-color : var(--st-bg-color-alt);
 }
 
 footer * {
-  font-size : var(--st-font-size-xs);
+  font-size : var(--st-font-size-s);
 }
 
 /******************************
@@ -529,8 +525,8 @@ footer * {
 .col.gutter,
 [class^='col-'].gutter,
 [class*=" col-"].gutter {
-  margin-left   : var(--st-space);
-  margin-bottom : var(--st-space);
+  margin-left   : var(--st-gutter);
+  margin-bottom : var(--st-gutter);
 }
 
 .col-1 {

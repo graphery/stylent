@@ -1,5 +1,18 @@
 # stylent.css Change Log
 
+## Version 1.0.0 (17/01/2022)
+
+- First estable version.
+- Removed `--st-font-size-xs`.
+- Changed `--st-font-size-s` value to `0.8em`.
+- Removed `--st-space-l`, `--st-space-xl`, and `--st-space-xxl`.
+- Added `--st-space-after`, `--st-space-before`, and `--st-gutter`.
+- Normalized space before and after elements. 
+
+## Version 0.2.3 (05/01/2022)
+
+- Fixed `.no-dark` reference (it's removed from 0.2.0).
+
 ## Version 0.2.2 (01/01/2022)
 
 - Changed the button opacity from 0.5 to 0.4

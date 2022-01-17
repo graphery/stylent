@@ -1,7 +1,7 @@
 {
   "name": "@graphery/stylent.css",
-  "version": "0.2.2",
-  "description": "minimalist style for a quick and clean starting point",
+  "version": "1.0.0",
+  "description": "minimalist and beautiful style for a quick and clean starting point",
   "author": "graphery",
   "license": "MIT",
   "devDependencies": {
@@ -21,24 +21,5 @@
   },
   "bugs": {
     "url": "https://github.com/graphery/stylent.css/issues"
-  },
-  "constributors": [
-    {
-      "name": "Pablo Almunia",
-      "email": "pabloalmunia@gmail.com",
-      "url": "https://github.com/pabloalmunia"
-    },
-    {
-      "url": "https://github.com/samuelmgalan"
-    },
-    {
-      "url": "https://github.com/javi3rms"
-    },
-    {
-      "name": "Irene Arribas"
-    },
-    {
-      "url": "https://github.com/todojs"
-    }
-  ]
+  }
 }
