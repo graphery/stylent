@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.graphery.online/stylent/stylent.min.css">
+  <link rel="stylesheet" href="../css/stylent.css">
   <script src="utils/colorize.js"></script>
   <title>stylent css</title>
 </head>
@@ -21,8 +21,8 @@
   </svg>
 </a>
 <header class="row">
-  <h1 class="col"><img src="https://www.graphery.org/img/gy.svg" width="100px"> stylent css</h1>
-  <div class="col align-center justify-end" style="font-size: var(--st-font-size-xs)">version 1.0.0</div>
+  <h1 class="col"><img src="https://www.graphery.org/img/gy.svg" width="100px" alt="graphery"> stylent css</h1>
+  <div class="col align-center justify-end" style="font-size: var(--st-font-size-s)">version 1.0.0</div>
 </header>
 <main>
   <section id="why">
@@ -199,6 +199,15 @@
   <dd>item 1.1</dd>
 </dl></code></pre>
   </section>
+  <section id="image">
+    <h2>Image</h2>
+    <p class="description">The Images don't have special style, only we remove the border when is included into an
+      anchor, and the <code>vertical-align</code> is defined as `bottom`.</p>
+    <article class="box">
+      <p>This is an inline image <img src="./img/image.png" alt="image"></p>
+    </article>
+    <pre><code><p>This is an inline image <img src="./img/image.png" alt="image"></p></code></pre>
+  </section>
   <section id="code">
     <h2>Code</h2>
     <p>The Code element represents a fragment of computer code. Just wrap anything in a <code>code</code> and it
@@ -255,6 +264,8 @@
           <option value="18-23">18-23</option>
           <option value="24+">24+</option>
         </select>
+        <label for="disabledField">Disabled field</label>
+        <input id="disabledField" type="text" placeholder="disabled" disabled>
         <label for="commentField">Comment</label>
         <textarea id="commentField" placeholder="text…"></textarea>
         <div class="row">
@@ -293,7 +304,7 @@
 </form></code></pre>
     <h3>All form elements</h3>
     <p>Check how is displayed every form element with <strong>stylent css</strong>:</p>
-    <table>
+    <table aria-describedby="form elements">
       <thead>
         <tr><th id="table-type">type</th><th id="table-code">code</th><th id="table-example">example</th></tr>
       </thead>
@@ -308,7 +319,7 @@
         <tr><td>file</td><td><code>&lt;input type="file"&gt;</code></td><td><input type="file"/></td></tr>
         <tr><td>hidden</td><td><code>&lt;input type="hidden"&gt;</code></td><td><input type="hidden"/></td></tr>
         <tr><td>image</td><td><code>&lt;input type="image" src=""></code></td><td><input type="image"
-                                                                                         src="img/up.svg"/></td></tr>
+                                                                                         src="img/up.svg" alt="up"/></td></tr>
         <tr><td>month</td><td><code>&lt;input type="month"&gt;</code></td><td><input type="month"/></td></tr>
         <tr><td>number</td><td><code>&lt;input type="number"&gt;</code></td><td><input type="number"/></td></tr>
         <tr><td>password</td><td><code>&lt;input type="password"&gt;</code></td><td><input type="password"/></td></tr>
@@ -372,7 +383,7 @@
     <p>The Table element represents data in two dimensions. <strong>stylent css</strong> displays an elegant table
       with <code>thead</code> and <code>tbody</code> estructure.</p>
     <article class="box">
-      <table>
+      <table aria-describedby="table">
         <thead>
           <tr><th>Fist name</th><th>Last name</th><th>Age</th><th>Location</th></tr>
         </thead>
@@ -382,7 +393,7 @@
         </tbody>
       </table>
     </article>
-    <pre><code><table>
+    <pre><code><table aria-describedby="table">
   <thead>
     <tr><th>Fist name</th><th>Last name</th><th>Age</th><th>Location</th></tr>
   </thead>
@@ -495,7 +506,7 @@
         buttonLabel.innerHTML = isDark ? 'ligth mode' : 'dark mode';
       });
     </script>
-    <table>
+    <table aria-describedby="dark">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -509,7 +520,7 @@
     <h2>Auxiliary Classes</h2>
     <p><strong>stylent css</strong> provides others useful basic classes to speed up development.</p>
     <h3 id="hidden">Hidden</h3>
-    <table>
+    <table aria-describedby="hidden">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -519,7 +530,7 @@
     </table>
     <pre><code><div class="hidden">hidden text</div></code></pre>
     <h3 id="align">Text align</h3>
-    <table>
+    <table aria-describedby="text align">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -537,7 +548,7 @@
 <p class="text-center">Center</p>
 <p class="text-right">Right</p></code></pre>
     <h3 id="distribution">Element distribution (flex)</h3>
-    <table>
+    <table aria-describedby="element distribution">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -597,7 +608,7 @@
       </div>
     </div>
     <h3 id="size">Element size</h3>
-    <table>
+    <table aria-describedby="element size">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -607,7 +618,7 @@
       </tbody>
     </table>
     <h3 id="selection">Selection</h3>
-    <table>
+    <table aria-describedby="selection">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -615,7 +626,7 @@
       </tbody>
     </table>
     <h3 id="wrap">Wrap</h3>
-    <table>
+    <table aria-describedby="wrap">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -633,7 +644,7 @@
     </p>
     <p>Of course, if you prefer to work directly by code, this is the list of available CSS custom variables and its
       initial values:</p>
-    <table>
+    <table aria-describedby="custom variables">
       <thead>
         <tr>
           <th id="custom-var">Variable</th>
@@ -648,7 +659,7 @@
         <tr><td class="no-wrap">--st-font-bold-weight</td><td><code> 500;</code></td></tr>
         <tr><td class="no-wrap">--st-font-size-xs</td><td><code> 0.8em;</code></td></tr>
         <tr><td class="no-wrap">--st-font-size-s</td><td><code> 0.9em;</code></td></tr>
-        <tr><td class="no-wrap">--st-font-size</td><td><code> 16px;</code></td></tr>
+        <tr><td class="no-wrap">--st-font-size</td><td><code> 15px;</code></td></tr>
         <tr><td class="no-wrap">--st-font-size-l</td><td><code> 1.15em;</code></td></tr>
         <tr><td class="no-wrap">--st-font-size-xl</td><td><code> 1.30em;</code></td></tr>
         <tr><td class="no-wrap">--st-font-size-xxl</td><td><code> 1.60em;</code></td></tr>

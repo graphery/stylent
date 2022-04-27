@@ -10,8 +10,8 @@
   --st-font-family-mono    : "Consolas", "Monaco", "Menlo", monospace;
   --st-font-weight         : 400;
   --st-font-bold-weight    : 500;
+  --st-font-size           : 15px;
   --st-font-size-s         : 0.8em;
-  --st-font-size           : 16px;
   --st-font-size-l         : 1.15em;
   --st-font-size-xl        : 1.30em;
   --st-font-size-xxl       : 1.60em;
@@ -100,6 +100,7 @@ html,
 body {
   margin          : 0;
   padding         : 0;
+  min-height      : 100vh;
   color           : var(--st-fore-color);
   background      : var(--st-bg-color);
   scroll-behavior : smooth;
@@ -160,138 +161,6 @@ p {
   margin-bottom : var(--st-space-after);
 }
 
-/******************************
-  Form
-******************************/
-label {
-  display       : inline-block;
-  margin-top    : var(--st-space-before);
-  margin-bottom : var(--st-space-after);
-}
-
-input:not([type=button]):not([type=summit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=color]),
-select,
-textarea {
-  height        : 2.7em;
-  width         : 100%;
-  margin-top    : var(--st-space-before);
-  margin-bottom : var(--st-space-after);
-  padding       : 0.5em;
-  font-size     : var(--st-font-size);
-  color         : var(--st-fore-color);
-  background    : var(--st-bg-color);
-  border        : var(--st-border-width) solid var(--st-border-color);
-  border-radius : var(--st-border-radius);
-  /* transition    : all 0.2s ease; */
-  font-family   : var(--st-font-family);
-}
-
-input[type=checkbox],
-input[type=radio] {
-  font-size      : var(--st-font-size);
-  height         : 1.2em;
-  width          : 1.2em;
-  vertical-align : middle;
-  /* transition     : all 0.2s ease; */
-}
-
-input[type=color] {
-  background : var(--st-bg-color);
-  height     : 2.7em;
-  width      : 2.7em;
-}
-
-input:not([type=button]):hover:not([type=submit]):hover:not([type=reset]):hover,
-select:hover,
-textarea:hover {
-  border-color : var(--st-fore-color);
-}
-
-input:not([type=button]):not([type=submit]):not([type=reset]):focus,
-select:focus,
-textarea:focus {
-  outline      : none;
-  border-color : var(--st-focus-border-color) !important;
-}
-
-input[type=image],
-input[type=image]:hover,
-input[type=image]:focus {
-  border : 0 !important;
-  width  : auto !important;
-}
-
-textarea {
-  min-height : 10em;
-}
-
-fieldset {
-  border        : var(--st-border-width) solid var(--st-border-color);
-  border-radius : var(--st-border-radius);
-  padding       : 1em;
-}
-
-form, fieldset {
-  margin-top    : var(--st-space-before);
-  margin-bottom : var(--st-space-after);
-}
-
-/******************************
-  Button
-******************************/
-button,
-.button,
-[type=submit],
-[type=reset],
-[type=button] {
-  display         : inline-block;
-  font-family     : var(--st-font-family);
-  margin-top      : var(--st-space-before);
-  margin-bottom   : var(--st-space-after);
-  outline         : none;
-  text-decoration : none;
-  color           : var(--st-fore-color-alt);
-  background      : var(--st-bg-color-alt);
-  opacity         : 0.8;
-  font-size       : var(--st-font-size);
-  border          : var(--st-border-width) solid var(--st-fore-color);
-  border-radius   : var(--st-border-radius);
-  /* transition      : all 0.2s ease; */
-  cursor          : pointer;
-  text-align      : center;
-  padding         : 0.59em 1em;
-  line-height     : 1.4;
-}
-
-button:hover:not([disabled]),
-.button:hover:not([disabled]),
-[type=submit]:hover:not([disabled]),
-[type=button]:hover:not([disabled]),
-button:focus,
-.button:focus,
-[type=submit]:focus,
-[type=button]:focus,
-button:active,
-.button:active,
-[type=submit]:active,
-[type=button]:active {
-  opacity         : 1;
-  text-decoration : none;
-}
-
-button[disabled],
-.button[disabled],
-[type=submit][disabled] {
-  opacity : 0.4;
-  cursor  : not-allowed;
-}
-
-button.outline,
-.button.outline,
-[type=submit].outline {
-  color      : var(--st-fore-color);
-  background : var(--st-bg-color);
-}
 
 /******************************
   Link
@@ -348,6 +217,149 @@ dl dd {
   margin-left : var(--st-space-before);
 }
 
+/******************************
+  Form
+******************************/
+label {
+  display       : inline-block;
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
+}
+
+input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=color]),
+select,
+textarea {
+  height        : 2.7em;
+  width         : 100%;
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
+  padding       : 0.5em;
+  font-size     : var(--st-font-size);
+  color         : var(--st-fore-color);
+  background    : var(--st-bg-color);
+  border        : var(--st-border-width) solid var(--st-border-color);
+  border-radius : var(--st-border-radius);
+  /* transition    : all 0.2s ease; */
+  font-family   : var(--st-font-family);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  font-size      : var(--st-font-size);
+  height         : 1.2em;
+  width          : 1.2em;
+  vertical-align : middle;
+  /* transition     : all 0.2s ease; */
+}
+
+input[type=color] {
+  background : var(--st-bg-color);
+  height     : 2.7em;
+  width      : 2.7em;
+}
+
+input:not([type=button]):hover:not([type=submit]):hover:not([type=reset]):hover,
+select:hover,
+textarea:hover {
+  border-color : var(--st-fore-color);
+}
+
+input:not([type=button]):not([type=submit]):not([type=reset]):focus,
+select:focus,
+textarea:focus {
+  outline      : none;
+  border-color : var(--st-focus-border-color) !important;
+}
+
+input:not([type=button]):not([type=submit]):not([type=reset]):disabled,
+input:not([type=button]):hover:not([type=submit]):hover:not([type=reset])[disabled]:hover {
+  border-color : var(--st-border-color);
+  opacity      : 0.5;
+  cursor       : not-allowed;
+}
+
+
+input[type=image],
+input[type=image]:hover,
+input[type=image]:focus {
+  border : 0 !important;
+  width  : auto !important;
+}
+
+
+textarea {
+  min-height : 10em;
+}
+
+fieldset {
+  border        : var(--st-border-width) solid var(--st-border-color);
+  border-radius : var(--st-border-radius);
+  padding       : 1em;
+}
+
+form, fieldset {
+  margin-top    : var(--st-space-before);
+  margin-bottom : var(--st-space-after);
+}
+
+/******************************
+  Button
+******************************/
+button,
+.button,
+a.button,
+[type=submit],
+[type=reset],
+[type=button] {
+  display         : inline-block;
+  font-family     : var(--st-font-family);
+  margin-top      : var(--st-space-before);
+  margin-bottom   : var(--st-space-after);
+  outline         : none;
+  text-decoration : none;
+  color           : var(--st-fore-color-alt);
+  background      : var(--st-bg-color-alt);
+  opacity         : 0.8;
+  font-size       : var(--st-font-size);
+  border          : var(--st-border-width) solid var(--st-fore-color);
+  border-radius   : var(--st-border-radius);
+  /* transition      : all 0.2s ease; */
+  cursor          : pointer;
+  text-align      : center;
+  padding         : 0.59em 1em;
+  line-height     : 1.4;
+}
+
+button:hover:not([disabled]),
+.button:hover:not([disabled]),
+[type=submit]:hover:not([disabled]),
+[type=button]:hover:not([disabled]),
+button:focus,
+.button:focus,
+[type=submit]:focus,
+[type=button]:focus,
+button:active,
+.button:active,
+[type=submit]:active,
+[type=button]:active {
+  opacity         : 1;
+  text-decoration : none;
+}
+
+button[disabled],
+.button[disabled],
+input[disabled] {
+  opacity : 0.5;
+  cursor  : not-allowed;
+}
+
+button.outline,
+.button.outline,
+[type=submit].outline {
+  color      : var(--st-fore-color);
+  background : var(--st-bg-color);
+}
+
 /*****************************
   Table
  *****************************/
@@ -392,9 +404,7 @@ th:last-child {
   Image
 ******************************/
 img {
-  margin-top    : var(--st-space-before);
-  margin-bottom : var(--st-space-after);
-  border        : none;
+  border : none;
 }
 
 h1 img,
@@ -470,7 +480,7 @@ header,
 main {
   font-size   : var(--st-font-size);
   width       : 90%;
-  max-width   : 960px;
+  max-width   : 1200px;
   margin      : 0 auto var(--st-space);
   padding-top : var(--st-space-before);
 }
