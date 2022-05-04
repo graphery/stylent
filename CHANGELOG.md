@@ -1,5 +1,19 @@
 # stylent.css Change Log
 
+## Version 1.1.1 (04/05/2022)
+
+- Added `!important` to `display: none` on `.hidden` class.
+
+## Version 1.1.0 (27/04/2022)
+
+- Change `--st-font-size` value to `15px`.
+- Added `min-height` on `html` and `body` with value `100vh`.
+- Fixed `[type=summit]` with `[type=submit]`.
+- Added `a.button` as button style.
+- Change the `opacity` value to `0.5` in disabled buttons.
+- Remove `margin-top` and `margin-bottom` on `img`.
+- Change `width` value to `1200px` on `header` and `main`.
+
 ## Version 1.0.0 (17/01/2022)
 
 - First estable version.
