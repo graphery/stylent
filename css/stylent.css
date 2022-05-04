@@ -1,4 +1,4 @@
-/*! stylent.css | v1.0.0 | Copyright 2022 Graphery | MIT License */
+/*! stylent.css | v1.1.1 | Copyright 2022 Graphery | MIT License */
 
 /******************************
  Variables
@@ -598,7 +598,7 @@ footer * {
   Auxiliar classes
 ******************************/
 .hidden {
-  display : none;
+  display : none !important;
 }
 
 .text-left {
